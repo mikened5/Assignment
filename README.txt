@@ -1,7 +1,7 @@
 ABOUT THE ASSIGNMENT
 --------------------
 +The assignment consists of two major parts:
- Coding a web server
+ Setting-up a web server
  Automating its deployment into a Kubernetes cluster
 
 
