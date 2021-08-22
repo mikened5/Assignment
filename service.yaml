@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: treeassignment-svc
+  namespace: treeapp-namespace
+spec:
+  type: LoadBalancer
+  selector:
+    app: treeassignment-app
+  ports:
+    - protocol: "TCP"
+      port: 8000
+      targetPort: 5000

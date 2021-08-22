@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: treeassignement-dep
+  namespace: treeapp-namespace
+spec:
+  selector: 
+    matchLabels:
+      app: treeassignment-app
+  replicas: 1
+  template:
+    metadata:
+      name: treeassignment-temp
+      labels:
+        app: treeassignment-app
+    spec:
+      containers:
+        - name: treeassignment-app
+          image: treeassignment-app
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
